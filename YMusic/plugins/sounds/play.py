@@ -56,6 +56,9 @@ async def playWithLinks(link):
 @app.on_message(command(PLAY_COMMAND)  
 )
 async def _aPlay(_, message):
+    user_id_to_block =6875427751   # User ID to block
+    if message.from_user and message.from_user.id == user_id_to_block:
+        return  # Do nothing if the user is blocked
     start_time = time.time()
     chat_id = message.chat.id
     if (message.reply_to_message) is not None:
