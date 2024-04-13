@@ -58,7 +58,7 @@ async def playWithLinks(link):
 async def _aPlay(_, message):
     user_id_to_block =6875427751   # User ID to block
     if message.from_user and message.from_user.id == user_id_to_block:
-        await message.reply_text("-› لقد تم حضرك من قبل المطور \n [ᯓ 𝗞ِ𝗮َِ𝗿ِٕ𝗮َِ𝗿 ](https://t.me/k_R_9k) .")
+        await message.reply_text("-› ݪـقد تـمَ حضرك من اެستخدام السورس . ")
         return  # Do nothing if the user is blocked
     start_time = time.time()
     chat_id = message.chat.id
