@@ -59,6 +59,7 @@ async def _aPlay(_, message):
     user_id_to_block =6875427751   # User ID to block
     if message.from_user and message.from_user.id == user_id_to_block:
         return  # Do nothing if the user is blocked
+        await m.edit("-› لقد تم حضرك من قبل مطور السورس لايمكنك استخدام الاوامر.")
     start_time = time.time()
     chat_id = message.chat.id
     if (message.reply_to_message) is not None:
