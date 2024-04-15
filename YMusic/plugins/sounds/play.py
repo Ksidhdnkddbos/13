@@ -80,7 +80,7 @@ async def _aPlay(_, message):
                     return
                 finish_time = time.time()
                 total_time_taken = str(int(finish_time - start_time)) + " ثانيـة "
-                await m.edit(f"-› تم التشـغيل بنجـاح .\n\n𓏺-› اسم المـلف : [{message.reply_to_message.audio.title[:19]}]({message.reply_to_message.link})\n𓏺-› وقـت المـلف : {message.reply_to_message.audio.duration}\n𓏺-› انتَ تدري شغـلتها خـلال : {total_time_taken}", disable_web_page_preview=True)
+                await m.edit(f"-› تم التشـغيل بنجـاح .\n\n𓏺-› اسم المـلف : [{message.reply_to_message.audio.title[:19]}]({message.reply_to_message.link})\n𓏺-› وقـت المـلف : {message.reply_to_message.audio.duration}\n-›طلب من :{first_name}\n𓏺-› انتَ تدري شغـلتها خـلال : {total_time_taken}", disable_web_page_preview=True)
     elif (len(message.command)) < 2:
         await message.reply_text("-› الامـر غلـط ترى .")
     else:
@@ -109,7 +109,7 @@ async def _aPlay(_, message):
             else:
                 if duration is None:
                     duration = "Playing From LiveStream"
-                add_to_queue(chat_id, title[:19], duration, songlink, link)
+                add_to_queue(chat_id, title[:19], duration, songlink, link, first_name)
                 finish_time = time.time()
                 total_time_taken = str(int(finish_time - start_time)) + "ثانيـةة"
                 await m.edit(f"-› تم التشـغيل بنجـاح .\n\n𓏺-› اسم المـلف : [{title[:19]}]({link}) \n-› وقـت المـلف : {duration} \n𓏺-› انتَ تدري شغـلتها خـلال : {total_time_taken} \n-›طلب من : {first} ", disable_web_page_preview=True)
