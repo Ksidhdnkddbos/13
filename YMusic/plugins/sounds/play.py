@@ -112,7 +112,7 @@ async def _aPlay(_, message):
                 add_to_queue(chat_id, title[:19], duration, songlink, link)
                 finish_time = time.time()
                 total_time_taken = str(int(finish_time - start_time)) + "ثانيـةة"
-                await m.edit(f"-› تم التشـغيل بنجـاح .\n\n𓏺-› اسم المـلف : [{title[:19]}]({link}) \n-› وقـت المـلف : {duration} \n𓏺-› انتَ تدري شغـلتها خـلال : {total_time_taken} ", disable_web_page_preview=True)
+                await m.edit(f"-› تم التشـغيل بنجـاح .\n\n𓏺-› اسم المـلف : [{title[:19]}]({link}) \n-› وقـت المـلف : {duration} \n𓏺-› انتَ تدري شغـلتها خـلال : {total_time_taken} \n-›طلب من : {first} ", disable_web_page_preview=True)
 
 
 @app.on_message(command(PLAY_COMMAND) & SUDOERS)
